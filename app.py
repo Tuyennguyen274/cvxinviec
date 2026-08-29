@@ -224,11 +224,11 @@ st.markdown("""
 <h4>💻 Kỹ năng Tin học văn phòng</h4>
 
 <p>
-Tôi có kiến thức cơ bản về Tin học văn phòng, có thể soạn thảo
-văn bản và sử dụng các phần mềm cơ bản trong tài chính.
-Mặc dù còn mới mẻ trong việc sử dụng các công cụ này,
-tôi luôn sẵn sàng học hỏi và cải thiện kỹ năng của mình
-để làm việc hiệu quả hơn.
+    Tôi có kiến thức cơ bản về Tin học văn phòng, có thể soạn thảo
+    văn bản và sử dụng các phần mềm cơ bản trong tài chính.
+    Mặc dù còn mới mẻ trong việc sử dụng các công cụ này,
+    tôi luôn sẵn sàng học hỏi và cải thiện kỹ năng của mình
+    để làm việc hiệu quả hơn.
 </p>
 
 <hr>
@@ -236,8 +236,8 @@ tôi luôn sẵn sàng học hỏi và cải thiện kỹ năng của mình
 <h4>💬 Kỹ năng Giao tiếp</h4>
 
 <p>
-Là một thực tập sinh, tôi có khả năng giao tiếp tốt,
-thích ứng với mỗi môi trường làm việc.
+    Là một thực tập sinh, tôi có khả năng giao tiếp tốt,
+    thích ứng với mỗi môi trường làm việc.
 </p>
 
 <hr>
@@ -245,15 +245,16 @@ thích ứng với mỗi môi trường làm việc.
 <h4>🤝 Kỹ năng làm việc nhóm</h4>
 
 <p>
-Là thực tập sinh ngân hàng, tôi có khả năng làm việc nhóm tốt,
-biết cách phối hợp và hỗ trợ đồng nghiệp để hoàn thành các
-nhiệm vụ chung. Tôi luôn lắng nghe, trao đổi ý kiến và đảm bảo
-hiệu quả công việc trong môi trường hợp tác.
+    Là thực tập sinh ngân hàng, tôi có khả năng làm việc nhóm tốt,
+    biết cách phối hợp và hỗ trợ đồng nghiệp để hoàn thành các
+    nhiệm vụ chung. Tôi luôn lắng nghe, trao đổi ý kiến và đảm bảo
+    hiệu quả công việc trong môi trường hợp tác.
 </p>
 ```
 
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
