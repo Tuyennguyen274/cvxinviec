@@ -205,55 +205,58 @@ with col2:
     """, unsafe_allow_html=True)
 
 
-# ==============================
-
+# ---------------------------------------------------------
 # KỸ NĂNG
+# ---------------------------------------------------------
 
-# ==============================
+with col1:
 
-st.markdown(
-'<div class="section-title">Kỹ năng</div>',
-unsafe_allow_html=True
-)
+    st.markdown(
+        '<div class="section-title">KỸ NĂNG</div>',
+        unsafe_allow_html=True
+    )
 
-st.markdown("""
+    st.markdown(
+        """
+        <div class="skill-title">
+            Kỹ năng giao tiếp
+        </div>
 
-<div class="card">
+        <div class="skill-content">
+            Giao tiếp và giải đáp thắc mắc của khách hàng
+        </div>
 
-```
-<h4>💻 Kỹ năng Tin học văn phòng</h4>
 
-<p>
-    Tôi có kiến thức cơ bản về Tin học văn phòng, có thể soạn thảo
-    văn bản và sử dụng các phần mềm cơ bản trong tài chính.
-    Mặc dù còn mới mẻ trong việc sử dụng các công cụ này,
-    tôi luôn sẵn sàng học hỏi và cải thiện kỹ năng của mình
-    để làm việc hiệu quả hơn.
-</p>
+        <div class="skill-title">
+            Kỹ năng làm việc nhóm
+        </div>
 
-<hr>
+        <div class="skill-content">
+            Control được công việc trong nhóm, phân chia cho các
+            thành viên trong nhóm hoặc có trách nhiệm với nhiệm vụ
+            được giao
+        </div>
 
-<h4>💬 Kỹ năng Giao tiếp</h4>
 
-<p>
-    Là một thực tập sinh, tôi có khả năng giao tiếp tốt,
-    thích ứng với mỗi môi trường làm việc.
-</p>
+        <div class="skill-title">
+            Kỹ năng quản lý thời gian
+        </div>
 
-<hr>
+        <div class="skill-content">
+            Phân bổ thời gian hợp lý cho từng công việc
+        </div>
 
-<h4>🤝 Kỹ năng làm việc nhóm</h4>
 
-<p>
-    Là thực tập sinh ngân hàng, tôi có khả năng làm việc nhóm tốt,
-    biết cách phối hợp và hỗ trợ đồng nghiệp để hoàn thành các
-    nhiệm vụ chung. Tôi luôn lắng nghe, trao đổi ý kiến và đảm bảo
-    hiệu quả công việc trong môi trường hợp tác.
-</p>
-```
+        <div class="skill-title">
+            Kỹ năng tin học
+        </div>
 
-</div>
-""", unsafe_allow_html=True)
+        <div class="skill-content">
+            Soạn thảo văn bảng, làm sile
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 
 
