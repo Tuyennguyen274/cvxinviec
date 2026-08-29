@@ -23,11 +23,6 @@ st.markdown("""
         padding-top: 20px;
     }
 
-    .cv-container {
-        max-width: 1100px;
-        margin: auto;
-    }
-
     .header {
         background: linear-gradient(135deg, #123c69, #1f5f99);
         color: white;
@@ -96,8 +91,24 @@ col1, col2 = st.columns([1, 2])
 # ==============================
 with col1:
 
-    st.markdown('<div class="section-title">Thông tin cá nhân</div>',
-                unsafe_allow_html=True)
+    # ==============================
+    # ẢNH ĐẠI DIỆN
+    # ==============================
+    st.image(
+        "photo.jpg",
+        width=250
+    )
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+
+    # ==============================
+    # THÔNG TIN CÁ NHÂN
+    # ==============================
+    st.markdown(
+        '<div class="section-title">Thông tin cá nhân</div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("""
     <div class="card">
@@ -110,8 +121,13 @@ with col1:
     """, unsafe_allow_html=True)
 
 
-    st.markdown('<div class="section-title">Sở thích</div>',
-                unsafe_allow_html=True)
+    # ==============================
+    # SỞ THÍCH
+    # ==============================
+    st.markdown(
+        '<div class="section-title">Sở thích</div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("""
     <div class="card">
@@ -122,8 +138,13 @@ with col1:
     """, unsafe_allow_html=True)
 
 
-    st.markdown('<div class="section-title">Giải thưởng</div>',
-                unsafe_allow_html=True)
+    # ==============================
+    # GIẢI THƯỞNG
+    # ==============================
+    st.markdown(
+        '<div class="section-title">Giải thưởng</div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("""
     <div class="card">
@@ -138,9 +159,13 @@ with col1:
 # ==============================
 with col2:
 
+    # ==============================
     # MỤC TIÊU NGHỀ NGHIỆP
-    st.markdown('<div class="section-title">Mục tiêu nghề nghiệp</div>',
-                unsafe_allow_html=True)
+    # ==============================
+    st.markdown(
+        '<div class="section-title">Mục tiêu nghề nghiệp</div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("""
     <div class="card">
@@ -162,9 +187,13 @@ with col2:
     """, unsafe_allow_html=True)
 
 
+    # ==============================
     # HỌC VẤN
-    st.markdown('<div class="section-title">Học vấn</div>',
-                unsafe_allow_html=True)
+    # ==============================
+    st.markdown(
+        '<div class="section-title">Học vấn</div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("""
     <div class="card">
@@ -176,14 +205,19 @@ with col2:
     """, unsafe_allow_html=True)
 
 
+    # ==============================
     # KỸ NĂNG
-    st.markdown('<div class="section-title">Kỹ năng</div>',
-                unsafe_allow_html=True)
+    # ==============================
+    st.markdown(
+        '<div class="section-title">Kỹ năng</div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("""
     <div class="card">
 
         <h4>💻 Kỹ năng Tin học văn phòng</h4>
+
         <p>
         Tôi có kiến thức cơ bản về Tin học văn phòng, có thể soạn thảo
         văn bản và sử dụng các phần mềm cơ bản trong tài chính.
@@ -195,6 +229,7 @@ with col2:
         <hr>
 
         <h4>💬 Kỹ năng Giao tiếp</h4>
+
         <p>
         Là một thực tập sinh, tôi có khả năng giao tiếp tốt,
         thích ứng với mỗi môi trường làm việc.
@@ -203,6 +238,7 @@ with col2:
         <hr>
 
         <h4>🤝 Kỹ năng làm việc nhóm</h4>
+
         <p>
         Là thực tập sinh ngân hàng, tôi có khả năng làm việc nhóm tốt,
         biết cách phối hợp và hỗ trợ đồng nghiệp để hoàn thành các
