@@ -223,7 +223,7 @@ with col1:
         </div>
 
         <div class="skill-content">
-            Giao tiếp và giải đáp thắc mắc của khách hàng
+            Là một thực tập sinh, tôi có khả năng giao tiếp tốt, thích ứng với mỗi môi trường làm việc.
         </div>
 
 
@@ -232,9 +232,9 @@ with col1:
         </div>
 
         <div class="skill-content">
-            Control được công việc trong nhóm, phân chia cho các
-            thành viên trong nhóm hoặc có trách nhiệm với nhiệm vụ
-            được giao
+            Là thực tập sinh ngân hàng, 
+            tôi có khả năng làm việc nhóm tốt, biết cách phối hợp và hỗ trợ đồng nghiệp để hoàn thành các nhiệm vụ chung. 
+            Tôi luôn lắng nghe, trao đổi ý kiến và đảm bảo hiệu quả công việc trong môi trường hợp tác.
         </div>
 
 
@@ -243,7 +243,8 @@ with col1:
         </div>
 
         <div class="skill-content">
-            Phân bổ thời gian hợp lý cho từng công việc
+            Có kỹ năng quản lý và sắp xếp thời gian hợp lý, biết xác định và ưu tiên các công việc quan trọng. 
+            Có khả năng lập kế hoạch, hoàn thành công việc đúng thời hạn và đảm bảo hiệu quả công việc.
         </div>
 
 
