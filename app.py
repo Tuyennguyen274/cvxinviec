@@ -252,7 +252,10 @@ with col1:
         </div>
 
         <div class="skill-content">
-            Soạn thảo văn bảng, làm sile
+            Tôi có kiến thức cơ bản về Tin học văn phòng, 
+            có thể soạn thảo văn bản và sử dụng các phần mềm cơ bản trong tài chính. 
+            Mặc dù còn mới mẻ trong việc sử dụng các công cụ này, 
+            tôi luôn sẵn sàng học hỏi và cải thiện kỹ năng của mình để làm việc hiệu quả hơn.
         </div>
         """,
         unsafe_allow_html=True
