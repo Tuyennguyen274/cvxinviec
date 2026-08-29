@@ -198,7 +198,7 @@ with col2:
     st.markdown("""
     <div class="card">
         <h4>TRƯỜNG ĐẠI HỌC NGUYỄN TẤT THÀNH</h4>
-        <p><b>Thời gian:</b> 2022 - 2025</p>
+        <p><b>Thời gian:</b> 2022 - 2026</p>
         <p><b>Chuyên ngành:</b> Tài chính - Ngân hàng</p>
         <p><b>Trình độ:</b> Sinh viên năm 3</p>
     </div>
