@@ -1,432 +1,229 @@
 import streamlit as st
 
-# =========================================================
+# ==============================
 # CẤU HÌNH TRANG
-# =========================================================
-
+# ==============================
 st.set_page_config(
-    page_title="CV - Nguyễn Thị Thu Tuyền",
-    page_icon="👩‍💼",
+    page_title="CV Nguyễn Thị Thu Tuyền",
+    page_icon="📄",
     layout="wide"
 )
 
-# =========================================================
-# CSS
-# =========================================================
-
+# ==============================
+# CSS GIAO DIỆN
+# ==============================
 st.markdown("""
 <style>
 
-    /* Toàn bộ trang */
     .stApp {
-        background-color: white;
+        background-color: #f5f7fb;
     }
 
     .main {
         padding-top: 20px;
     }
 
-    /* Font */
-    html, body, [class*="css"] {
-        font-family: Arial, sans-serif;
+    .cv-container {
+        max-width: 1100px;
+        margin: auto;
     }
 
-    /* Tên */
+    .header {
+        background: linear-gradient(135deg, #123c69, #1f5f99);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+    }
+
     .name {
-        font-size: 38px;
+        font-size: 42px;
         font-weight: bold;
-        color: #c6283d;
         margin-bottom: 5px;
     }
 
-    /* Chức danh */
-    .job {
-        font-size: 22px;
-        color: #222222;
-        margin-bottom: 15px;
+    .position {
+        font-size: 20px;
+        font-weight: 500;
     }
 
-    /* Giới thiệu */
-    .intro {
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: justify;
-        color: #222222;
-    }
-
-    /* Tiêu đề section */
     .section-title {
-        font-size: 21px;
+        color: #123c69;
+        font-size: 25px;
         font-weight: bold;
-        color: #111111;
-        border-top: 3px solid #c6283d;
-        border-bottom: 3px solid #c6283d;
-        padding: 7px 5px;
-        margin-top: 20px;
+        border-bottom: 2px solid #123c69;
+        padding-bottom: 7px;
+        margin-top: 25px;
         margin-bottom: 15px;
     }
 
-    /* Nội dung */
-    .content {
-        font-size: 16px;
-        line-height: 1.55;
-        color: #222222;
+    .card {
+        background-color: white;
+        padding: 22px;
+        border-radius: 12px;
+        margin-bottom: 18px;
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
     }
 
-    /* Tên trường / công ty */
-    .bold {
+    .info-title {
         font-weight: bold;
-    }
-
-    /* Kinh nghiệm */
-    .experience-date {
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    .company {
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    /* Bullet */
-    .bullet {
-        margin-left: 15px;
-        line-height: 1.5;
-        font-size: 15px;
-    }
-
-    /* Kỹ năng */
-    .skill-title {
-        font-size: 16px;
-        font-weight: bold;
-        margin-top: 12px;
-    }
-
-    .skill-content {
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
-    /* Thông tin cá nhân */
-    .info-row {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .icon {
-        color: #c6283d;
-        font-weight: bold;
-        margin-right: 10px;
-    }
-
-    /* Ảnh */
-    .profile-img {
-        width: 100%;
-        max-width: 300px;
-        border: 1px solid #dddddd;
-    }
-
-    /* Timeline */
-    .timeline {
-        border-left: 3px solid #777777;
-        margin-left: 10px;
-        padding-left: 25px;
-    }
-
-    .dot {
-        width: 12px;
-        height: 12px;
-        background-color: #c6283d;
-        border-radius: 50%;
-        position: absolute;
-        margin-left: -33px;
-        margin-top: 5px;
-    }
-
-    /* Ẩn menu Streamlit */
-    #MainMenu {
-        visibility: hidden;
-    }
-
-    footer {
-        visibility: hidden;
-    }
-
-    header {
-        visibility: hidden;
+        color: #123c69;
     }
 
 </style>
 """, unsafe_allow_html=True)
 
 
-# =========================================================
-# PHẦN 1: ẢNH + THÔNG TIN GIỚI THIỆU
-# =========================================================
+# ==============================
+# HEADER
+# ==============================
+st.markdown("""
+<div class="header">
+    <div class="name">NGUYỄN THỊ THU TUYỀN</div>
+    <div class="position">THỰC TẬP SINH NGÂN HÀNG TMCP QUÂN ĐỘI</div>
+</div>
+""", unsafe_allow_html=True)
 
-col1, col2 = st.columns([1, 2.2], gap="large")
 
+# ==============================
+# CHIA 2 CỘT
+# ==============================
+col1, col2 = st.columns([1, 2])
+
+
+# ==============================
+# CỘT TRÁI
+# ==============================
 with col1:
 
-    st.image(
-        "photo.jpg",
-        width=300
-    )
+    st.markdown('<div class="section-title">Thông tin cá nhân</div>',
+                unsafe_allow_html=True)
 
-with col2:
-
-    st.markdown(
-        '<div class="name">NGUYỄN THỊ THU TUYỀN</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        '<div class="job">Nhân viên tín dụng</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        '<hr style="border: 1px solid #222222;">',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="intro">
-        Hiện tôi là sinh viên năm 3 Trường Đại học Nguyễn Tất Thành.
-        Trong hơn hai năm học tập và đồng hành cùng các thầy cô giảng viên,
-        tôi đã được trang bị những kiến thức nền tảng về lĩnh vực ngân hàng,
-        tài chính cùng các kỹ năng cơ bản như giao tiếp, làm việc nhóm,
-        xử lý tình huống và sử dụng tin học văn phòng.
-        Tôi mong muốn được tham gia môi trường làm việc chuyên nghiệp để
-        vận dụng những kiến thức đã học vào thực tế, không ngừng học hỏi,
-        tích lũy kinh nghiệm và phát triển các kỹ năng chuyên môn.
-        Mục tiêu của tôi là trở thành một nhân viên có tinh thần trách nhiệm,
-        chủ động, luôn hoàn thành tốt công việc được giao và từng bước
-        phát triển sự nghiệp lâu dài trong lĩnh vực ngân hàng.
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-# =========================================================
-# PHẦN 2: THÔNG TIN CÁ NHÂN - HỌC VẤN - CHỨNG CHỈ
-# =========================================================
-
-col1, col2, col3 = st.columns([1, 1.15, 1.1], gap="large")
-
-
-# ---------------------------------------------------------
-# THÔNG TIN CÁ NHÂN
-# ---------------------------------------------------------
-
-with col1:
-
-    st.markdown(
-        '<div class="section-title">THÔNG TIN CÁ NHÂN</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="info-row">
-            <span class="icon">●</span>
-            04/04/2005
-        </div>
-
-        <div class="info-row">
-            <span class="icon">✉</span>
-            trandieulinh34@gmail.com
-        </div>
-
-        <div class="info-row">
-            <span class="icon">☎</span>
-            0889905402
-        </div>
-
-        <div class="info-row">
-            <span class="icon">📍</span>
-            98 Nguyễn Văn Săng
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-# ---------------------------------------------------------
-# HỌC VẤN
-# ---------------------------------------------------------
-
-with col2:
-
-    st.markdown(
-        '<div class="section-title">HỌC VẤN</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="content">
-
-        <div class="bold">
-        Đại học Nguyễn Tất Thành
-        </div>
-
-        Tài chính - Ngân hàng
-
-        <br>
-
-        2023 - 2027
-
-        <br>
-
-        Chuyên ngành Tài chính ngân hàng
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-# ---------------------------------------------------------
-# CHỨNG CHỈ
-# ---------------------------------------------------------
-
-with col3:
-
-    st.markdown(
-        '<div class="section-title">CHỨNG CHỈ</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="content">
-
-        Tin học:
-
-        <br>
-
-        Word, Excel, PDF
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-# =========================================================
-# =========================================================
-# KINH NGHIỆM LÀM VIỆC
-# =========================================================
-
-st.markdown("## KINH NGHIỆM LÀM VIỆC")
-st.divider()
-
-col_time, col_content = st.columns([1, 3])
-
-with col_time:
-    st.markdown("🔴 **03/2025 - 04/2026**")
-
-with col_content:
-    st.markdown("### Doanh nghiệp tư nhân Thắt lưng giá tốt")
-    
-    st.markdown("**Nhân viên tư vấn và chăm sóc khách hàng**")
-    
     st.markdown("""
-    - Liên hệ tệp **+1000 khách hàng tiềm năng** và tư vấn khách hàng sử dụng các sản phẩm.
-    
-    - Tiếp nhận và xử lý các yêu cầu của khách hàng về sản phẩm.
-    
-    - Chăm sóc khách hàng cũ, hỗ trợ giải đáp mọi thắc mắc của khách hàng đối với sản phẩm đang sử dụng.
-    """)
-    
-# =========================================================
-# PHẦN 4: KỸ NĂNG + NGƯỜI THAM KHẢO
-# =========================================================
-
-col1, col2 = st.columns([1, 1], gap="large")
+    <div class="card">
+        <p><span class="info-title">Ngày sinh:</span> 13/03/2004</p>
+        <p><span class="info-title">Giới tính:</span> Nữ</p>
+        <p><span class="info-title">Điện thoại:</span> 0346954274</p>
+        <p><span class="info-title">Email:</span> thutuyen74t@gmail.com</p>
+        <p><span class="info-title">Địa chỉ:</span> Phường Thạnh Xuân, Quận 12, TP.HCM</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 
-# ---------------------------------------------------------
-# KỸ NĂNG
-# ---------------------------------------------------------
+    st.markdown('<div class="section-title">Sở thích</div>',
+                unsafe_allow_html=True)
 
-with col1:
-
-    st.markdown(
-        '<div class="section-title">KỸ NĂNG</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="skill-title">
-            Kỹ năng giao tiếp
-        </div>
-
-        <div class="skill-content">
-            Giao tiếp và giải đáp thắc mắc của khách hàng
-        </div>
+    st.markdown("""
+    <div class="card">
+        ✈️ Du lịch<br><br>
+        🎵 Nghe nhạc<br><br>
+        📚 Đọc sách
+    </div>
+    """, unsafe_allow_html=True)
 
 
-        <div class="skill-title">
-            Kỹ năng làm việc nhóm
-        </div>
+    st.markdown('<div class="section-title">Giải thưởng</div>',
+                unsafe_allow_html=True)
 
-        <div class="skill-content">
-            Control được công việc trong nhóm, phân chia cho các
-            thành viên trong nhóm hoặc có trách nhiệm với nhiệm vụ
-            được giao
-        </div>
-
-
-        <div class="skill-title">
-            Kỹ năng quản lý thời gian
-        </div>
-
-        <div class="skill-content">
-            Phân bổ thời gian hợp lý cho từng công việc
-        </div>
+    st.markdown("""
+    <div class="card">
+        🏆 <b>2023</b><br>
+        Sinh viên 5 tốt cấp trường
+    </div>
+    """, unsafe_allow_html=True)
 
 
-        <div class="skill-title">
-            Kỹ năng tin học
-        </div>
-
-        <div class="skill-content">
-            Soạn thảo văn bảng, làm sile
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-# ---------------------------------------------------------
-# NGƯỜI THAM KHẢO
-# ---------------------------------------------------------
-
+# ==============================
+# CỘT PHẢI
+# ==============================
 with col2:
 
-    st.markdown(
-        '<div class="section-title">NGƯỜI THAM KHẢO</div>',
-        unsafe_allow_html=True
-    )
+    # MỤC TIÊU NGHỀ NGHIỆP
+    st.markdown('<div class="section-title">Mục tiêu nghề nghiệp</div>',
+                unsafe_allow_html=True)
 
-    st.markdown(
-        """
-        <div class="content">
+    st.markdown("""
+    <div class="card">
+        Tôi mong muốn trở thành một thực tập sinh ngân hàng TMCP QUÂN ĐỘI,
+        nơi tôi có thể áp dụng kiến thức tài chính và ngân hàng đã học được
+        trong suốt quá trình học tập, đồng thời phát triển kỹ năng chuyên môn
+        trong môi trường làm việc thực tế.
+        <br><br>
+        Với sự ham học hỏi và khả năng làm việc nhóm, tôi hy vọng có thể
+        đóng góp vào sự phát triển của ngân hàng, đồng thời học hỏi và
+        trau dồi thêm kinh nghiệm để hướng tới việc phát triển sự nghiệp
+        trong ngành ngân hàng.
+        <br><br>
+        Mục tiêu của tôi là hiểu rõ hơn về các quy trình nghiệp vụ ngân hàng,
+        phát triển khả năng phân tích tài chính và nâng cao kỹ năng giao tiếp
+        với khách hàng, từ đó trở thành một chuyên viên khách hàng trong lĩnh
+        vực tài chính và ngân hàng trong tương lai.
+    </div>
+    """, unsafe_allow_html=True)
 
-        <div class="bold">
-            Cao Thị Mỹ Huê
-        </div>
 
-        Giám đốc phòng kinh doanh (SM) - Ngân hàng TMCP
-        Quốc Tế Việt Nam (VIB)
+    # HỌC VẤN
+    st.markdown('<div class="section-title">Học vấn</div>',
+                unsafe_allow_html=True)
 
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown("""
+    <div class="card">
+        <h4>TRƯỜNG ĐẠI HỌC NGUYỄN TẤT THÀNH</h4>
+        <p><b>Thời gian:</b> 2022 - 2025</p>
+        <p><b>Chuyên ngành:</b> Tài chính - Ngân hàng</p>
+        <p><b>Trình độ:</b> Sinh viên năm 3</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+    # KỸ NĂNG
+    st.markdown('<div class="section-title">Kỹ năng</div>',
+                unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="card">
+
+        <h4>💻 Kỹ năng Tin học văn phòng</h4>
+        <p>
+        Tôi có kiến thức cơ bản về Tin học văn phòng, có thể soạn thảo
+        văn bản và sử dụng các phần mềm cơ bản trong tài chính.
+        Mặc dù còn mới mẻ trong việc sử dụng các công cụ này,
+        tôi luôn sẵn sàng học hỏi và cải thiện kỹ năng của mình
+        để làm việc hiệu quả hơn.
+        </p>
+
+        <hr>
+
+        <h4>💬 Kỹ năng Giao tiếp</h4>
+        <p>
+        Là một thực tập sinh, tôi có khả năng giao tiếp tốt,
+        thích ứng với mỗi môi trường làm việc.
+        </p>
+
+        <hr>
+
+        <h4>🤝 Kỹ năng làm việc nhóm</h4>
+        <p>
+        Là thực tập sinh ngân hàng, tôi có khả năng làm việc nhóm tốt,
+        biết cách phối hợp và hỗ trợ đồng nghiệp để hoàn thành các
+        nhiệm vụ chung. Tôi luôn lắng nghe, trao đổi ý kiến và đảm bảo
+        hiệu quả công việc trong môi trường hợp tác.
+        </p>
+
+    </div>
+    """, unsafe_allow_html=True)
+
+
+# ==============================
+# FOOTER
+# ==============================
+st.markdown("---")
+
+st.markdown(
+    """
+    <center>
+        <p>© CV Nguyễn Thị Thu Tuyền | Streamlit Portfolio</p>
+    </center>
+    """,
+    unsafe_allow_html=True
+)
